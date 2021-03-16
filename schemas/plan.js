@@ -74,15 +74,14 @@ export default {
             title: 'Case No.',
             type: 'number',
           },
-          // {
-          //   name: 'patienSheet',
-          //   title: 'Patient Sheet',
-          //   type: 'string',
-          //   inputComponent: HoverInput
-          // },
+          {
+            name: 'patienSheet',
+            title: 'Patient Sheet',
+            type: 'boolean',
+          },
           {
             // The display name for this field
-            title: "Upper Aligners",
+            title: "Upper Aligners Number",
   
             // The identifier for this field used in the api's
             name: "upperCount",
@@ -94,7 +93,7 @@ export default {
           },
           {
             // The display name for this field
-            title: "Lower Aligners",
+            title: "Lower Aligners Number",
   
             // The identifier for this field used in the api's
             name: "lowerCount",
@@ -116,8 +115,6 @@ export default {
                                    .slice(0, 200)
             }
           },
-
-
           {
             title: 'Videos',
             name: 'sequence',
