@@ -75,7 +75,7 @@ export default {
             type: 'number',
           },
           {
-            name: 'patienSheet',
+            name: 'patientSheet',
             title: 'Patient Sheet',
             type: 'boolean',
           },
