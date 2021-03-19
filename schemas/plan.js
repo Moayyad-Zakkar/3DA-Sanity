@@ -76,7 +76,7 @@ export default {
           },
           {
             name: 'patientSheet',
-            title: 'Patient Sheet',
+            title: 'Patient Inforamation Sheet (Arabic)',
             type: 'boolean',
           },
           {
