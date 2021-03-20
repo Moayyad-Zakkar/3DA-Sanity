@@ -1,48 +1,6 @@
 import client from 'part:@sanity/base/client'
 import { object } from 'prop-types';
 
-import React from 'react'
-
-// Important items to allow form fields to work properly and patch the dataset.
-import {PatchEvent, set} from 'part:@sanity/form-builder/patch-event'
-import FormField from 'part:@sanity/components/formfields/default'
-
-// Import the TextInput from UI
-import { TextInput } from '@sanity/ui'
-
-/*
-const HoverInput = React.forwardRef((props, ref) => {
-  const { type, onChange } = props
-  return(
-    <div>
-        <Flex align="center">
-      <Checkbox
-        id="checkbox"
-        style={{display: 'block'}}
-      />
-      <Box flex={1} paddingLeft={3}>
-        <Text>
-          <label htmlFor="checkbox">
-            Reveal Patient Sheet
-          </label>
-        </Text>
-      </Box>
-    </Flex>
-    <FormField label={type.title} description={type.description}>
-      <TextInput
-        type="text"
-        ref={ref}
-        placeholder={type.placeholder}
-        value={props.value}
-        onChange={event => {onChange(PatchEvent.from(set(event.target.value)))}}
-      /> 
-    </FormField>
-    </div>
-  )
-
-})
-*/
-
 export default {
         // This is the display name for the type
         title: "3DA Plan",
@@ -124,12 +82,11 @@ export default {
               collapsible: true,
             },
             fields: [
-              {
-                title: 'Front View',
-                name: 'front',
-                type: 'file',     
-              },
-    
+                {
+                  title: 'Front View',
+                  name: 'front',
+                  type: 'file',     
+                },
                 {
                   title: 'Left View',
                   name: 'left',
@@ -149,6 +106,42 @@ export default {
                   title: 'Lower Occlusal View',
                   name: 'lower',
                   type: 'file',                
+                },
+            ]
+          },
+          {
+            title: 'Before & After Images',
+            name: 'beforeAfter',
+            type: "object",
+            description: 'Here you upload Before & After images of the treatment plan',
+            options: {
+              collapsible: true,
+            },
+            fields: [
+                {
+                  title: 'Front View',
+                  name: 'front',
+                  type: 'image',     
+                },
+                {
+                  title: 'Left View',
+                  name: 'left',
+                  type: 'image',
+                },
+                {
+                  title: 'Right View',
+                  name: 'right',
+                  type: 'image',
+                },
+                {
+                  title: 'Upper Occlusal View',
+                  name: 'upper',
+                  type: 'image',              
+                },
+                {
+                  title: 'Lower Occlusal View',
+                  name: 'lower',
+                  type: 'image',                
                 },
             ]
           },
