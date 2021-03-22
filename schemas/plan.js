@@ -25,7 +25,6 @@ export default {
             // The type of this field
             type: "string",
         
-            
           },
           {
             name: 'caseNum',
@@ -169,4 +168,17 @@ export default {
             */
            
         ],
+        preview: {
+          select: {
+            title: 'patientName',
+            subtitle: 'caseNum'
+          },
+          prepare(selection) {
+            const {title, subtitle} = selection
+            return {
+              title: title,
+              subtitle: `no: ${subtitle}`
+            }
+          }
+        }
       }
