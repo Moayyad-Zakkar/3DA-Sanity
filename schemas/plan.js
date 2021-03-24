@@ -60,8 +60,29 @@ export default {
         
           },
           {
+            // The display name for this field
+            title: "Estimated treatment time (weeks):",
+  
+            // The identifier for this field used in the api's
+            name: "estimatedTime",
+  
+            // The type of this field
+            type: "number",
+          },
+          {
+            // The display name for this field
+            title: "Aligner System Logo",
+  
+            // The identifier for this field used in the api's
+            name: "logo",
+  
+            // The type of this field
+            type: "image",
+          },
+          {
             title: 'Slug',
             name: 'slug',
+            description: 'Replace the generated slug with <slug> in the following website: https://www.3d-aligners.co/<slug>',
             type: 'slug',
             options: {
               source: 'patientName',
