@@ -61,7 +61,7 @@ export default {
           },
           {
             // The display name for this field
-            title: "Estimated treatment time (weeks):",
+            title: "Estimated treatment time (months):",
   
             // The identifier for this field used in the api's
             name: "estimatedTime",
